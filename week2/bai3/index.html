@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí tài khoản</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f1efef;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .form-container .gender_label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: auto;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h1>Đăng kí tài khoản</h1>
+            <hr style="border:2px solid black;">
+            <label for="username">Tên đăng nhập:</label> <br/>
+            <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required> <br/>
+            <label for="password">Mật khẩu:</label> <br/>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required><br/>
+            <label for="password-confirm">Nhập lại mật khẩu:</label> <br/>
+            <input type="password" id="password-confirm" name="password-confirm" placeholder="Nhập lại mật khẩu"  required><br/>
+            <label for="email">Email:</label> <br/>
+            <input type="email" id="email" name="email" placeholder="Nhập email"  required> <br/>
+            <label for="name">Họ và tên:</label> <br/>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required> <br/>
+            <label for="birthdate">Ngày sinh:</label> <br/>
+            <input type="date" id="birthdate" name="birthdate" required> <br/>
+            <label for="class">Lớp:</label> <br/>
+            <select name="class" id="class">
+                <option value="CNTT1">CNTT1</option>
+                <option value="CNTT2">CNTT2</option>
+                <option value="CK">Cơ khí</option>
+                <option value="DTT1">Điện 1</option>
+                <option value="DTT2">Điện 2</option>
+            </select> <br/>
+            <label class="gender_label" for="gender">Giới tính:</label>
+            <label class="gender_label">
+                Nam
+                <input type="radio" name="gender" id="male" required>
+            </label>
+            <label class="gender_label">
+                Nữ
+                <input type="radio" name="gender" id="female" required>
+            </label>
+            <br/>
+            <label for="phone">Số điện thoại:</label> <br/>
+            <input type="tel" name="phone" id="phone" placeholder="Nhập số điện thoại" required>
+            <br>
+            <button type="submit">Đăng kí</button>
+        </form>
+    </div>
+</body>
+</html>
